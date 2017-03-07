@@ -21,6 +21,9 @@ RUN dpkg --add-architecture i386 && \
     mkdir android && cd android && \
     wget -O tools.zip ${ANDROID_SDK_URL} && \
     unzip tools.zip && rm tools.zip && \
+    mkdir "licenses" || true && \
+    echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "licenses/android-sdk-license" && \
+    echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "licenses/android-sdk-preview-license" && \
     echo y | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION},extra-android-m2repository,extra-google-m2repository,extra-google-play_billing && \
     chmod a+x -R $ANDROID_HOME && \
     chown -R root:root $ANDROID_HOME && \
