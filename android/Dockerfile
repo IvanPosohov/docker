@@ -4,7 +4,7 @@ FROM posohof/java
 MAINTAINER Ivan Posokhov <posohof@gmail.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/tools_r25.2.5-linux.zip" \
-    ANDROID_BUILD_TOOLS_VERSION=25.0.2 \
+    ANDROID_BUILD_TOOLS_VERSION=25.0.3 \
     ANDROID_APIS="android-25" \
     GRADLE_HOME="/usr/share/gradle" \
     ANDROID_HOME="/opt/android"
