@@ -4,8 +4,8 @@ FROM posohof/java
 MAINTAINER Ivan Posokhov <posohof@gmail.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
-    ANDROID_APIS="android-25" \
-    ANDROID_BUILD_TOOLS=25.0.3 \
+    ANDROID_APIS="android-26" \
+    ANDROID_BUILD_TOOLS=26.0.1 \
     ANDROID_HOME="/opt/android"
 
 ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS:/usr/share/gradle/bin
