@@ -14,7 +14,7 @@ WORKDIR /opt
 
 RUN dpkg --add-architecture i386 && \
     apt-get -qq update && \
-    apt-get -qq install -y vim wget git curl gradle libncurses5:i386 libstdc++6:i386 zlib1g:i386
+    apt-get -qq install -y zip vim wget git curl gradle libncurses5:i386 libstdc++6:i386 zlib1g:i386
 
 # Installs Android SDK
 RUN mkdir android && cd android && \
@@ -42,3 +42,5 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8  
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8
+
+ENV DOCKER_CI true
