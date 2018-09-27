@@ -23,7 +23,7 @@ RUN mkdir android && cd android && \
     mkdir ~/.android && \
     echo '### User Sources for Android SDK Manager' > ~/.android/repositories.cfg && \
     yes | tools/bin/sdkmanager --licenses && \
-    tools/bin/sdkmanager "platforms;${ANDROID_APIS}" "build-tools;${ANDROID_BUILD_TOOLS}" "extras;google;m2repository" && \
+    tools/bin/sdkmanager "platforms;${ANDROID_APIS}" "platform-tools" "build-tools;${ANDROID_BUILD_TOOLS}" "extras;google;m2repository" && \
     tools/bin/sdkmanager --update && \
     chmod a+x -R $ANDROID_HOME && \
     chown -R root:root $ANDROID_HOME
