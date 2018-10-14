@@ -5,7 +5,7 @@ MAINTAINER Ivan Posokhov <posohof@gmail.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
     ANDROID_APIS="android-28" \
-    ANDROID_BUILD_TOOLS=28.0.2 \
+    ANDROID_BUILD_TOOLS=28.0.3 \
     ANDROID_HOME="/opt/android"
 
 ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS:/usr/share/gradle/bin
