@@ -17,7 +17,7 @@ RUN apt-get -qqy update && apt-get -qqy install --no-install-recommends \
 # Installs Android SDK
 RUN cd android && \
     yes | tools/bin/sdkmanager --licenses && \
-    tools/bin/sdkmanager "emulator" "system-images;android-28;google_apis;x86_64" && \
+    tools/bin/sdkmanager "emulator" "system-images;android-29;google_apis;x86_64" && \
     tools/bin/sdkmanager --update
 
 # Add entrypoint
