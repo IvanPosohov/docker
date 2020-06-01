@@ -4,8 +4,8 @@ FROM posohof/java
 MAINTAINER Ivan Posokhov <posohof@gmail.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
-    ANDROID_APIS="android-28" \
-    ANDROID_BUILD_TOOLS=28.0.3 \
+    ANDROID_APIS="android-29" \
+    ANDROID_BUILD_TOOLS=29.0.2 \
     ANDROID_HOME="/opt/android"
 
 ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS:/usr/share/gradle/bin
@@ -14,7 +14,7 @@ WORKDIR /opt
 
 RUN dpkg --add-architecture i386 && \
     apt-get -qq update && \
-    apt-get -qq install -y zip vim wget git curl gradle libncurses5:i386 libstdc++6:i386 zlib1g:i386
+    apt-get -qq install -y zip vim wget git curl gradle libncurses5:i386 libstdc++6:i386 zlib1g:i386 locales
 
 # Installs Android SDK
 RUN mkdir android && cd android && \
