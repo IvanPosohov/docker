@@ -1,8 +1,8 @@
-FROM adoptopenjdk/openjdk11:alpine
+FROM adoptopenjdk/openjdk17:alpine
 MAINTAINER Ivan Posokhov <posohof@gmail.com>
 
-ENV ANDROID_APIS="android-30"
-ENV ANDROID_BUILD_TOOLS=31.0.0
+ENV ANDROID_APIS="android-33"
+ENV ANDROID_BUILD_TOOLS=33.0.2
 ENV ANDROID_HOME "/opt/sdk"
 ENV CMDLINE_VERSION "4.0"
 ENV SDK_TOOLS "7302050"
