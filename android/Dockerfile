@@ -1,11 +1,12 @@
-FROM adoptopenjdk/openjdk17:alpine
-MAINTAINER Ivan Posokhov <posohof@gmail.com>
+FROM eclipse-temurin:17-jdk-alpine
 
-ENV ANDROID_APIS="android-33"
-ENV ANDROID_BUILD_TOOLS=33.0.2
+LABEL maintainer="Ivan Posokhov <posohof@gmail.com>"
+
+ENV ANDROID_APIS="android-36"
+ENV ANDROID_BUILD_TOOLS=36.0.0
 ENV ANDROID_HOME "/opt/sdk"
 ENV CMDLINE_VERSION "4.0"
-ENV SDK_TOOLS "7302050"
+ENV SDK_TOOLS "14742923"
 ENV PATH $PATH:${ANDROID_HOME}/cmdline-tools/${CMDLINE_VERSION}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/extras/google/instantapps
 
 RUN apk add --no-cache bash git unzip wget && \
